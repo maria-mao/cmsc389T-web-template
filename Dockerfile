@@ -5,7 +5,7 @@
 #the docker lecture will help you complete this file 
 #there should be a total of 9 lines
 FROM node:10-alpine
-RUN useradd node
+RUN useradd -ms /bin/bash node
 RUN mkdir -p /home/usr/node-web-app && chown -R node:node /home/usr/node-web-app
 WORKDIR /home/usr/node-web-app/
 COPY package.json ./
