@@ -10,6 +10,6 @@ RUN mkdir -p /home/node/node-web-app && chown -R node:node /home/node/node-web-a
 WORKDIR /home/node/node-web-app
 COPY package.json ./
 #USER node
-RUN npm install
+RUN npm install package.json
 EXPOSE 8080
 CMD [ "node", "app.js" ]
