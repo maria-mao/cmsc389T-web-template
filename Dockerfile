@@ -6,8 +6,8 @@
 #there should be a total of 9 lines
 FROM node:10-alpine
 RUN useradd -ms /bin/bash node
-RUN mkdir -p /home/node/app && chown -R node:node /home/node/app
-WORKDIR /home/node/app
+RUN mkdir -p /home/node/node-web-app && chown -R node:node /home/node/node-web-app
+WORKDIR /home/node/node-web-app
 COPY package.json ./
 USER node
 RUN npm install
