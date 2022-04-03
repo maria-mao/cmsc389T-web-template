@@ -8,7 +8,7 @@ FROM node:10-alpine
 RUN useradd -ms /bin/bash node
 RUN mkdir -p /home/node/app && chown -R node:node /home/node/app
 WORKDIR /home/node/app
-COPY package.json
+COPY package.json ./
 USER node
 RUN npm install
 EXPOSE 8080
