@@ -9,7 +9,7 @@ FROM node:10-alpine
 RUN mkdir -p /home/node/node-web-app && chown -R node:node /home/node/node-web-app
 WORKDIR /home/node/node-web-app
 COPY package.json ./
-USER node
+#USER node
 RUN npm install
 EXPOSE 8080
 CMD [ "node", "app.js" ]
