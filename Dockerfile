@@ -5,9 +5,9 @@
 #the docker lecture will help you complete this file 
 #there should be a total of 9 lines
 FROM node:10-alpine
-#RUN adduser -ms /bin/bash node
-RUN mkdir -p /C/Users/maria/cmsc389T-web-template/node/node-web-app && chown -R node:node /C/Users/maria/cmsc389T-web-template/node/node-web-app
-WORKDIR /C/Users/maria/cmsc389T-web-template/node/node-web-app/
+RUN useradd node
+RUN mkdir -p /home/usr/node-web-app && chown -R node:node /home/usr/node-web-app
+WORKDIR /home/usr/node-web-app/
 COPY package.json ./
 USER node
 RUN npm install
