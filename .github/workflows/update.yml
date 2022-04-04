@@ -25,5 +25,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            cd maria-mao/cmsc389T-web-template 
+            cd cmsc389T-web-template 
             git pull
