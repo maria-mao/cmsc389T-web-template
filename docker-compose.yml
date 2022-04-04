@@ -4,6 +4,7 @@ services:
   nodejs:
     #fill out the configuration here
     #image: docker.io/library/node-web-app
+    build: ./
     networks:
       - app-network
   
