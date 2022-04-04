@@ -3,9 +3,7 @@ version: '3'
 services:
   nodejs:
     #fill out the configuration here
-    image: node-10:alpine
-    container_name: nodejscontainer
-    restart: unless-stopped
+    image: docker.io/library/node-web-app
     networks:
       - app-network
   
